@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+img {
+  width: 200px !important;
+  height: auto !important;
+}
+
+.home {
+  &__container {
+    display: flex;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}

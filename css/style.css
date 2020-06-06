@@ -1,0 +1,17 @@
+body {
+  margin: 0; }
+
+img {
+  width: 200px !important;
+  height: auto !important; }
+
+.home__container {
+  display: flex; }
+.home__column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+  overflow-y: scroll; }
+
+/*# sourceMappingURL=style.css.map */
