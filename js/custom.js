@@ -21,7 +21,6 @@ function getInfo() {
 
             $('#olx').html(data.olx);
             $('#realty').html(data.realty);
-            // $('#domRia').html(data.domRia);
         },
 
         error: function(response) {
