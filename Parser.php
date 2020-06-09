@@ -138,7 +138,7 @@ class Parser
         $list = $page->find('table[id=offers_table]',0);
 
         foreach ($list->find('tr[class=wrap]') as $item ) {
-            $link = $item->find('td[class=title-cell] a',0)->href;
+            $link = $this->clearLink($item->find('td[class=title-cell] a',0)->href);
 
             if(strlen($last) > 0) {
                 if(strpos($last,$link) !== false || strpos($link,$last) !== false ) {
@@ -158,7 +158,7 @@ class Parser
         $list = $page->find('div[id=realty-search-results]',0);
 
         foreach ($list->find('div[class=realty-object-card  odd], div[class=realty-object-card  even]') as $item ) {
-            $link = $item->find('div[class=object-address] a',0)->href;
+            $link = $this->clearLink($item->find('div[class=object-address] a',0)->href);
 
             if(strlen($last) > 0) {
                 if(strpos($last,$link) !== false || strpos($link,$last) !== false ) {
@@ -188,6 +188,10 @@ class Parser
             $this->domRiaInfo .= $item . '<br><hr>';
             echo $item;
         }
+    }
+
+    public function clearLink($link) {
+        return preg_replace('|#(.*)|','',$link);
     }
 
 
