@@ -2,7 +2,7 @@ window.onload = function() {
 
     setInterval(function() {
         getInfo();
-    }, 15 * 1000);
+    }, 60 * 1000);
 }
 
 function getInfo() {
